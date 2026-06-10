@@ -1,152 +1,200 @@
-// Get the navbar element
-const navbar = document.querySelector('.navbar');
+// Navbar Scroll Effect
+document.addEventListener('DOMContentLoaded', function() {
+    const navbar = document.querySelector('.navbar');
+    let lastScrollTop = 0;
 
-// Get the initial offset of the navbar
-const navbarOffset = navbar.offsetTop;
-
-// Function to fix the navbar's position when scrolling
-function fixNavbar() {
-    if (window.pageYOffset >= navbarOffset) {
-        navbar.classList.add('fixed');
-    } else {
-        navbar.classList.remove('fixed');
-    }
-}
-
-// Add event listener for scroll event
-window.addEventListener('scroll', fixNavbar);
-
-
-// script.js
-window.onload = function() {
-    const img = document.querySelector('.app__header-img');
-    let opacity = 0;
-    const animationSpeed = 0.02; // Adjust animation speed as needed
-
-    // Function to fade in the image
-    function fadeInImage() {
-        opacity += animationSpeed;
-        img.style.opacity = opacity;
-
-        if (opacity < 1) {
-            requestAnimationFrame(fadeInImage);
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset;
+        
+        if (scrollTop > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
         }
-    }
+        
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    });
+});
 
-    // Start the fade-in animation
-    requestAnimationFrame(fadeInImage);
+// Intersection Observer for Animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
 };
 
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 100);
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
 
+// Observe Elements on Page Load
+document.addEventListener('DOMContentLoaded', function() {
+    const profileItems = document.querySelectorAll('.app__profile-item');
+    const workItems = document.querySelectorAll('.app__work-item');
+    const skillsItems = document.querySelectorAll('.app__skills-item');
+    const footerCards = document.querySelectorAll('.app__footer-card');
 
+    [profileItems, workItems, skillsItems, footerCards].forEach(collection => {
+        collection.forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+            observer.observe(item);
+        });
+    });
+});
+
+// Filter Functionality with Smooth Transitions
 document.addEventListener('DOMContentLoaded', function() {
     const filterItems = document.querySelectorAll('.app__work-filter-item');
     const projects = document.querySelectorAll('.project');
 
-    // Function to filter projects
     function filterProjects(filter) {
-        projects.forEach(project => {
-            if (filter === 'all' || project.dataset.category === filter) {
-                project.style.display = 'block';
+        projects.forEach((project, index) => {
+            const shouldShow = filter === 'all' || project.dataset.category === filter;
+            
+            if (shouldShow) {
+                setTimeout(() => {
+                    project.style.display = 'block';
+                    project.style.animation = 'none';
+                    setTimeout(() => {
+                        project.style.animation = 'fadeInUp 0.6s ease-out';
+                    }, 10);
+                }, index * 50);
             } else {
                 project.style.display = 'none';
             }
         });
     }
 
-    // Add click event listeners to filter items
     filterItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Remove 'item-active' class from all filter items
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
             filterItems.forEach(filterItem => filterItem.classList.remove('item-active'));
-            // Add 'item-active' class to the clicked filter item
             item.classList.add('item-active');
-            // Get the filter category from the clicked filter item
+            
             const filter = item.getAttribute('data-filter');
-            // Filter projects based on the selected filter
             filterProjects(filter);
         });
     });
 
-    // Display all projects by default
     filterProjects('all');
 });
-window.onload = function() {
-    const img = document.querySelector('.app__work-portfolio');
-    let opacity = 0;
-    const animationSpeed = 0.018; // Adjust animation speed as needed
 
-    // Function to fade in the image
-    function fadeInImage() {
-        opacity += animationSpeed;
-        img.style.opacity = opacity;
-
-        if (opacity < 1) {
-            requestAnimationFrame(fadeInImage);
-        }
-    }
-
-    // Start the fade-in animation
-    requestAnimationFrame(fadeInImage);
-};
-window.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.querySelector('.app__navbar');
-    const blurryBackground = document.querySelector('.blurry-background');
-
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-            blurryBackground.classList.add('active');
-        } else {
-            navbar.classList.remove('scrolled');
-            blurryBackground.classList.remove('active');
-        }
-    });
-});
+// Contact Form Handler
 document.addEventListener('DOMContentLoaded', function() {
     const sendButton = document.getElementById('send-button');
     
-    sendButton.addEventListener('click', function() {
-        const username = document.getElementById('username').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-
-        if (username && email && message) {
-            // Log the form data to the console
-            console.log('Name:', username);
-            console.log('Email:', email);
-            console.log('Message:', message);
-
-            // Store the form data in localStorage
-            let messages = JSON.parse(localStorage.getItem('messages')) || [];
-            messages.push({ username, email, message });
-            localStorage.setItem('messages', JSON.stringify(messages));
-
-            // Display a confirmation message to the user
+    if (sendButton) {
+        sendButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username');
+            const email = document.getElementById('email');
+            const message = document.getElementById('message');
             const confirmationMessage = document.getElementById('confirmation-message');
-            confirmationMessage.style.display = 'block';
 
-            // Clear the form inputs
-            document.getElementById('username').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('message').value = '';
-        } else {
-            alert('Please fill out all fields.');
-        }
-    });
+            if (username && email && message && username.value && email.value && message.value) {
+                console.log('Name:', username.value);
+                console.log('Email:', email.value);
+                console.log('Message:', message.value);
 
-    // Retrieve and log all messages stored in localStorage
-    function logStoredMessages() {
-        let storedMessages = JSON.parse(localStorage.getItem('messages')) || [];
-        storedMessages.forEach((msg, index) => {
-            console.log(`Message ${index + 1}`);
-            console.log('Name:', msg.username);
-            console.log('Email:', msg.email);
-            console.log('Message:', msg.message);
+                let messages = JSON.parse(localStorage.getItem('messages')) || [];
+                messages.push({ 
+                    username: username.value, 
+                    email: email.value, 
+                    message: message.value,
+                    timestamp: new Date()
+                });
+                localStorage.setItem('messages', JSON.stringify(messages));
+
+                if (confirmationMessage) {
+                    confirmationMessage.style.display = 'block';
+                    
+                    setTimeout(() => {
+                        confirmationMessage.style.opacity = '0';
+                        confirmationMessage.style.transform = 'translateY(20px)';
+                        
+                        setTimeout(() => {
+                            confirmationMessage.style.display = 'none';
+                            confirmationMessage.style.opacity = '1';
+                            confirmationMessage.style.transform = 'translateY(0)';
+                        }, 300);
+                    }, 3000);
+                }
+
+                username.value = '';
+                email.value = '';
+                message.value = '';
+            } else {
+                alert('Please fill out all fields.');
+            }
         });
     }
 
-    // Call the function to log stored messages when the page loads
+    // Log stored messages
+    function logStoredMessages() {
+        let storedMessages = JSON.parse(localStorage.getItem('messages')) || [];
+        storedMessages.forEach((msg, index) => {
+            console.log(`Message ${index + 1}:`, msg);
+        });
+    }
+
     logStoredMessages();
 });
 
+// Navigation Dots Active State
+document.addEventListener('DOMContentLoaded', function() {
+    const navigationDots = document.querySelectorAll('.app__navigation-dot');
+    const containers = document.querySelectorAll('.app__container');
+
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.id;
+                navigationDots.forEach(dot => {
+                    dot.style.backgroundColor = 'rgba(49, 59, 172, 0.2)';
+                    dot.style.boxShadow = 'none';
+                    dot.style.transform = 'scale(1)';
+                    
+                    if (dot.getAttribute('href') === `#${id}`) {
+                        dot.style.backgroundColor = 'rgb(49, 59, 172)';
+                        dot.style.boxShadow = '0 0 12px rgba(49, 59, 172, 0.3)';
+                        dot.style.transform = 'scale(1.3)';
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    containers.forEach(container => navObserver.observe(container));
+});
+
+// Smooth Scroll Behavior for Navigation Links
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link, .app__navigation-dot');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
+});

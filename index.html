@@ -16,43 +16,29 @@
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root">
         <div class="app">
-            <nav class="navbar navbar-expand-lg nav" aria-label="Offcanvas navbar large" style=" backdrop-filter: blur(4px) !important;
-            -webkit-backdrop-filter: blur(4px) !important;
-            background: hsla(0, 0%, 100%, .25) !important;
-            border: 1px solid hsla(0, 0%, 100%, .18) !important;" >
+            <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                  <a class="app__navbar-logo navbar-brand" href="#home"><img src="M.png" alt=""></a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
+                  <a class="app__navbar-logo navbar-brand" href="#home"><img src="M.png" alt="Logo"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
-                  <div class=" offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
                     <div class="offcanvas-header">
-
-                      <button type="button" class=" btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                      <h5 class="offcanvas-title" id="offcanvasNavbar2Label"></h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <div class=" ">
-                      <ul class=" nav-item flex-grow-1 pe-3">
-                        <li class="app__flex p-text ">
-                          <a class="nav-link  " aria-current="page" href="#home">Home</a>
-                        </li>
-                        <li class="app__flex p-text ">
-                          <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="app__flex p-text ">
-                            <a class="nav-link" href="#work">Work</a>
-                          </li>
-                          <li class="app__flex p-text ">
-                            <a class="nav-link" href="#skills">Skills</a>
-                          </li>
-                          <li class="app__flex p-text ">
-                            <a class="nav-link" href="#contact">Contact</a>
-                          </li>
-                      
+                    <div class="offcanvas-body">
+                      <ul class="nav-item ms-auto">
+                        <li><a class="nav-link" href="#home" data-bs-dismiss="offcanvas">Home</a></li>
+                        <li><a class="nav-link" href="#about" data-bs-dismiss="offcanvas">About</a></li>
+                        <li><a class="nav-link" href="#work" data-bs-dismiss="offcanvas">Work</a></li>
+                        <li><a class="nav-link" href="#skills" data-bs-dismiss="offcanvas">Skills</a></li>
+                        <li><a class="nav-link" href="#contact" data-bs-dismiss="offcanvas">Contact</a></li>
                       </ul>
                     </div>
                   </div>
                 </div>
-              </nav>
+            </nav>
                 <div id="home" class="app__container undefined">
                     <div class="app__social">
                         <div><a href="https://x.com/drexstargamin1">
@@ -81,9 +67,9 @@
                         <div class="app__header app__flex">
                             <div class="app__header-info">
                                 <div class="app__header-badge">
-                                    <div class="badge-cmp app__flex" style="margin-top: 5rem;     padding: 1rem 2rem !important;">
+                                    <div class="badge-cmp app__flex">
                                         <span>👋</span>
-                                        <div style="margin-left: 20px;">
+                                        <div>
                                             <p class="p-text">Hello, I am</p>
                                             <h1 class="head-text">David</h1>
                                         </div>
@@ -114,7 +100,7 @@
                             </div>
                         </div>
                         <div class="app__navigation">
-                            <a href="#home" class="app__navigation-dot" style="background-color: rgb(49, 59, 172);">
+                            <a href="#home" class="app__navigation-dot" >
 
                             </a>
                             <a href="#about" class="app__navigation-dot"></a>
@@ -150,14 +136,14 @@
                         <div class="app__wrapper app__flex">
                             <h2 class="head-text">I Know that <span>Good Design</span> <br>means  <span>Good Business</span></h2>
                             <div class="app__profiles">
-                                <div class="app__profile-item" style="opacity: 1; transform: none;"><img src="https://cdn.sanity.io/images/ujq3tlvc/production/65ed72deac647aa84f75c5af8f6284ab926931b0-1200x900.png" alt="UI/UX">
-                                    <h2 class="bold-text" style="margin-top: 20px;">UI/UX</h2>
-                                    <p class="p-text" style="margin-top: 10px;">Talented UI/UX designer crafting exceptional user experiences</p>
+                                <div class="app__profile-item" ><img src="https://cdn.sanity.io/images/ujq3tlvc/production/65ed72deac647aa84f75c5af8f6284ab926931b0-1200x900.png" alt="UI/UX">
+                                    <h2 class="bold-text" >UI/UX</h2>
+                                    <p class="p-text" >Talented UI/UX designer crafting exceptional user experiences</p>
                                 </div>
-                                <div class="app__profile-item" style="opacity: 1; transform: none;" >
+                                <div class="app__profile-item"  >
                                     <img src="https://cdn.sanity.io/images/ujq3tlvc/production/db53adca404b7410a2869db815e4ce77da2e7e53-1200x900.png" alt="UI/UX">
-                                    <h2 class="bold-text" style="margin-top: 20px;">Web Development</h2>
-                                    <p class="p-text" style="margin-top: 10px;">Experienced web developer skilled at driving growth</p>
+                                    <h2 class="bold-text" >Web Development</h2>
+                                    <p class="p-text" >Experienced web developer skilled at driving growth</p>
                                 </div>
                           
                             </div>
@@ -168,7 +154,7 @@
                         </div
                         ><div class="app__navigation">
                             <a href="#home" class="app__navigation-dot"></a>
-                            <a href="#about" class="app__navigation-dot" style="background-color: rgb(49, 59, 172);"></a>
+                            <a href="#about" class="app__navigation-dot" ></a>
                             <a href="#work" class="app__navigation-dot"></a>
                             <a href="#skills" class="app__navigation-dot"></a>
                             <a href="#contact" class="app__navigation-dot"></a>
@@ -222,7 +208,7 @@
                                                 </div>
                                                 <div class="app__work-content app__flex">
                                                     <h4 class="bold-text">Dangy</h4>
-                                                    <p class="p-text" style="margin-top: 10px;">Discover Dangy, the ultimate anime website for fans. (Project still in development)</p>
+                                                    <p class="p-text" >Discover Dangy, the ultimate anime website for fans. (Project still in development)</p>
                                                     <div class="app__work-tag app__flex">
                                                         <p class="p-text">Website</p>
                                                     </div>
@@ -242,7 +228,7 @@
                                                 </div>
                                                 <div class="app__work-content app__flex">
                                                     <h4 class="bold-text">Chess</h4>
-                                                    <p class="p-text" style="margin-top: 10px;">Play chess against an incredible AI i built using ReactJs.</p>
+                                                    <p class="p-text" >Play chess against an incredible AI i built using ReactJs.</p>
                                                     <div class="app__work-tag app__flex">
                                                         <p class="p-text">Website</p>
                                                     </div>
@@ -262,7 +248,7 @@
                                                 </div>
                                                 <div class="app__work-content app__flex">
                                                     <h4 class="bold-text">Pottery Class</h4>
-                                                    <p class="p-text" style="margin-top: 10px;">"Created an engaging landing page for a pottery class that showcases courses and products with a streamlined sign-up process.".</p>
+                                                    <p class="p-text" >"Created an engaging landing page for a pottery class that showcases courses and products with a streamlined sign-up process.".</p>
                                                     <div class="app__work-tag app__flex">
                                                         <p class="p-text">Website</p>
                                                     </div>
@@ -281,7 +267,7 @@
                                         </div>
                                         <div class="app__work-content app__flex">
                                             <h4 class="bold-text">Task Manager</h4>
-                                            <p class="p-text" style="margin-top: 10px;">Talented UI/UX designer crafting exceptional user experiences</p>
+                                            <p class="p-text" >Talented UI/UX designer crafting exceptional user experiences</p>
                                             <div class="app__work-tag app__flex">
                                                 <p class="p-text">Website</p>
                                             </div>
@@ -301,7 +287,7 @@
                                                 </div>
                                                 <div class="app__work-content app__flex">
                                                     <h4 class="bold-text">RESUME BUILDER</h4>
-                                                    <p class="p-text" style="margin-top: 10px;">Created a website that drafts the perfect resume in seconds</p>
+                                                    <p class="p-text" >Created a website that drafts the perfect resume in seconds</p>
                                                     <div class="app__work-tag app__flex">
                                                         <p class="p-text">Website</p>
                                                     </div>
@@ -322,7 +308,7 @@
                                                 </div>
                                                 <div class="app__work-content app__flex">
                                                     <h4 class="bold-text">My Portfolio</h4>
-                                                    <p class="p-text" style="margin-top: 10px;">Experienced web developer skilled at driving growth.</p>
+                                                    <p class="p-text" >Experienced web developer skilled at driving growth.</p>
                                                     <div class="app__work-tag app__flex">
                                                         <p class="p-text">Website</p>
                                                     </div>
@@ -343,7 +329,7 @@
                                                 </div>
                                                 <div class="app__work-content app__flex">
                                                     <h4 class="bold-text">AstraWebCrafts</h4>
-                                                    <p class="p-text" style="margin-top: 10px;">AstraWebCrafts provides premium websites, video production, SEO.</p>
+                                                    <p class="p-text" >AstraWebCrafts provides premium websites, video production, SEO.</p>
                                                     <div class="app__work-tag app__flex">
                                                         <p class="p-text">Website</p>
                                                     </div>
@@ -361,7 +347,7 @@
                                     <div class="app__navigation">
                                         <a href="#home" class="app__navigation-dot"></a>
                                         <a href="#about" class="app__navigation-dot"></a>
-                                        <a href="#work" class="app__navigation-dot" style="background-color: rgb(49, 59, 172);"></a>
+                                        <a href="#work" class="app__navigation-dot" ></a>
                                         <a href="#skills" class="app__navigation-dot"></a>
                                         <a href="#contact" class="app__navigation-dot"></a>
                                     </div>
@@ -392,7 +378,7 @@
                                     </div>
                                 </div>
                                 <div class="app__wrapper app__flex">
-                                    <div class="app__skills app__flex" style="opacity: 1; transform: none;">
+                                    <div class="app__skills app__flex" >
                                         <h2 class="head-text">Skills &amp; Experiences</h2>
                                         <div class="app__skills-container">
                                             <div class="app__skills-list">
@@ -516,7 +502,7 @@
                                     </a>
                                     <a href="#about" class="app__navigation-dot"></a>
                                     <a href="#work" class="app__navigation-dot"></a>
-                                    <a href="#skills" class="app__navigation-dot" style="background-color: rgb(49, 59, 172);"></a>
+                                    <a href="#skills" class="app__navigation-dot" ></a>
                                     <a href="#contact" class="app__navigation-dot"></a>
                                 </div>
                             </div>
@@ -594,7 +580,7 @@
                                 </a>
                                 <a href="#skills" class="app__navigation-dot">
                                 </a>
-                                <a href="#contact" class="app__navigation-dot" style="background-color: rgb(49, 59, 172);"></a></div></div></div>
+                                <a href="#contact" class="app__navigation-dot" ></a></div></div></div>
                             </div>
                             <script src="script.js"></script>
 
