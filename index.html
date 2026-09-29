@@ -1,603 +1,344 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head><meta charset="utf-8"/>
-        <link rel="icon" href="./logu.png"/>
-        <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        <meta name="theme-color" content="#000000"/>
-        <link rel="apple-touch-icon" href="/logo192.png"/>
-        <link rel="manifest" href="/manifest.json"/>
-        <title>David</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-     <link rel="stylesheet" href="styles.css">
-        </head>
-        
-    <body>
-   
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root">
-        <div class="app">
-            <nav class="navbar navbar-expand-lg nav" aria-label="Offcanvas navbar large" style=" backdrop-filter: blur(4px) !important;
-            -webkit-backdrop-filter: blur(4px) !important;
-            background: hsla(0, 0%, 100%, .25) !important;
-            border: 1px solid hsla(0, 0%, 100%, .18) !important;" >
-                <div class="container-fluid">
-                  <a class="app__navbar-logo navbar-brand" href="#home"><img src="M.png" alt=""></a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class=" offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
-                    <div class="offcanvas-header">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>David Adesanya | Full-stack & AI engineer</title>
+<meta name="description" content="David Adesanya: full-stack and AI engineer in Lagos. I build products end to end and ship them. Open to internships and contract work.">
+<link rel="icon" href="M.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0C0C0D; --panel:#131315; --fg:#ECE7DB; --dim:#8F8B82; --line:#26262A; --red:#FF3B47; --ok:#4ADE80;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#F1EDE3; --panel:#E8E3D6; --fg:#141312; --dim:#6E6A61; --line:#D2CCBC; --ok:#15803D}}
+:root[data-theme="light"]{--bg:#F1EDE3; --panel:#E8E3D6; --fg:#141312; --dim:#6E6A61; --line:#D2CCBC; --ok:#15803D}
+html{scroll-padding-top:70px;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 1rem/1.6 Geist,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit}
+h1,h2,h3,p,ul,dl{margin-top:0}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.w{width:100%;max-width:1120px;margin:0 auto;padding:0 max(1.1rem,env(safe-area-inset-left,0px))}
+@media(min-width:800px){.w{padding:0 2rem}}
+.d{font-family:"Bricolage Grotesque",Geist,sans-serif;letter-spacing:-.03em;font-weight:700}
 
-                      <button type="button" class=" btn-close " data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class=" ">
-                      <ul class=" nav-item flex-grow-1 pe-3">
-                        <li class="app__flex p-text ">
-                          <a class="nav-link  " aria-current="page" href="#home">Home</a>
-                        </li>
-                        <li class="app__flex p-text ">
-                          <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="app__flex p-text ">
-                            <a class="nav-link" href="#work">Work</a>
-                          </li>
-                          <li class="app__flex p-text ">
-                            <a class="nav-link" href="#skills">Skills</a>
-                          </li>
-                          <li class="app__flex p-text ">
-                            <a class="nav-link" href="#contact">Contact</a>
-                          </li>
-                      
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </nav>
-                <div id="home" class="app__container undefined">
-                    <div class="app__social">
-                        <div><a href="https://x.com/drexstargamin1">
-                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
-                                </svg>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="https://www.in.com/in/falodun-daniel-7aa6a922b/">
-                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z"></path>
-                                </svg>
-                            </a>
-                        </div>
-                     
-                        <div>
-                            <a href="https://github.com/DavidAdeboye">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64">
-                                    <path d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"></path>
-                                    </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="app__wrapper app__flex">
-                        <div class="app__header app__flex">
-                            <div class="app__header-info">
-                                <div class="app__header-badge">
-                                    <div class="badge-cmp app__flex" style="margin-top: 5rem;     padding: 1rem 2rem !important;">
-                                        <span>👋</span>
-                                        <div style="margin-left: 20px;">
-                                            <p class="p-text">Hello, I am</p>
-                                            <h1 class="head-text">David</h1>
-                                        </div>
-                                    </div>
-                                    <div class="tag-cmp app__flex">
-                                        <p class="p-text">Fullstack</p>
-                                        <p class="p-text">Developer</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="app__header-img" id="app__header-img">
-                                <img src="circle.134eeeb1e58895b892195fe8ed63bc9f.svg" alt="circle.134eeeb1e58895b892195fe8ed63bc9f.svg">
-                                <img src="63d38ff86b40d6d019165f73.svg" alt="" class="overlay_circle">
-                            </div><div class="app__header-circles">
-                                <div class="circle-cmp app__flex">
-                                    <img src="css3.webp" alt="profile_bg">
-                                </div>
-                                <div class="circle-cmp app__flex">
-                                    <img src="https://cdn.iconscout.com/icon/free/png-512/free-react-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-5-pack-logos-icons-2945110.png?f=webp&w=256" alt="">
-                                     </div>
-                                    <div class="circle-cmp app__flex">
-                                        <img src="https://cdn.sanity.io/images/ujq3tlvc/production/6551e520e801ab656029527c09265981c06dce33-480x480.png" alt="profile_bg">
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
+/* nav */
+.nav{position:sticky;top:0;z-index:40;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nav .w{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:56px}
+.nav a{text-decoration:none}
+.logo{font-size:1.1rem}
+.links{display:none;gap:1.6rem;color:var(--dim);font-size:.95rem}
+@media(min-width:760px){.links{display:flex}}
+.links a{padding:.2rem 0;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s}
+.links a:hover,.links a[aria-current="true"]{color:var(--fg);border-color:var(--red)}
+.nr{display:flex;align-items:center;gap:.8rem;font-size:.88rem;color:var(--dim)}
+.kbd{display:none;font:500 .8rem Geist,sans-serif;color:var(--dim);background:none;border:1px solid var(--line);border-radius:5px;padding:.2rem .5rem;cursor:pointer}
+.kbd:hover{color:var(--fg);border-color:var(--dim)}
+@media(min-width:760px){.kbd{display:inline-block}}
+#clock{font-variant-numeric:tabular-nums}
 
-                            </div>
-                        </div>
-                        <div class="app__navigation">
-                            <a href="#home" class="app__navigation-dot" style="background-color: rgb(49, 59, 172);">
+/* hero */
+.hero{padding:clamp(2.2rem,6vw,4.5rem) 0 clamp(2.2rem,5vw,3.5rem)}
+.hg{display:grid;gap:2rem;align-items:center}
+@media(min-width:900px){.hg{grid-template-columns:1.05fr .95fr;gap:3rem}}
+.pill{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--line);border-radius:99px;padding:.25rem .8rem;font-size:.88rem;color:var(--dim);margin-bottom:1.3rem}
+.pill i{width:.5rem;height:.5rem;border-radius:50%;background:var(--ok);animation:pu 2s infinite}
+@keyframes pu{50%{opacity:.3}}
+h1{font-size:clamp(2.3rem,5.6vw,4.6rem);line-height:1;margin-bottom:1.1rem}
+.sub{max-width:44ch;font-size:1.1rem;color:var(--dim);margin-bottom:1.5rem}
+.sub b{color:var(--fg);font-weight:500}
+.cta{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:1.6rem}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:.5rem 1.15rem;border:1px solid var(--line);border-radius:6px;text-decoration:none;font-weight:500;font-size:.96rem;transition:background .2s,color .2s,border-color .2s}
+.btn:hover{border-color:var(--fg)}
+.btn.f{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.btn.f:hover{background:var(--red);border-color:var(--red);color:#0C0C0D}
+.meta{display:flex;flex-wrap:wrap;gap:.3rem 1.4rem;font-size:.9rem;color:var(--dim);padding:0;margin:0;list-style:none}
+.meta li::before{content:"";display:inline-block;width:.35rem;height:.35rem;background:var(--red);border-radius:50%;margin-right:.5rem;vertical-align:.12em}
+.sig{position:relative;border:1px solid var(--line);border-radius:8px;background:var(--panel);overflow:hidden}
+.sig canvas{display:block;width:100%;height:clamp(240px,34vw,340px);cursor:crosshair}
+.sig .cap{display:flex;justify-content:space-between;gap:1rem;padding:.6rem .9rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--dim)}
+.sig .cap span:first-child::before{content:"";display:inline-block;width:.7rem;height:2px;background:var(--red);margin-right:.5rem;vertical-align:middle}
+.sig .cap em{font-style:normal;font-variant-numeric:tabular-nums}
 
-                            </a>
-                            <a href="#about" class="app__navigation-dot"></a>
-                            <a href="#work" class="app__navigation-dot"></a>
-                            <a href="#skills" class="app__navigation-dot"></a>
-                            <a href="#contact" class="app__navigation-dot"></a>
-                        </div>
-                    </div>
-                    <div id="about" class="app__container undefined">
-                        <div class="app__social">
-                            <div>
-                                <a href="https://x.com/drexstargamin">
-                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="https://www.linkedin.com/in/adesanya-david-78212a2a7/">
-                                    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        
-                            <div>
-                                <a href="https://github.com/DavidAdeboye">
-                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64">
-                                        <path d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"></path>
-                                        </svg>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="app__wrapper app__flex">
-                            <h2 class="head-text">I Know that <span>Good Design</span> <br>means  <span>Good Business</span></h2>
-                            <div class="app__profiles">
-                                <div class="app__profile-item" style="opacity: 1; transform: none;"><img src="https://cdn.sanity.io/images/ujq3tlvc/production/65ed72deac647aa84f75c5af8f6284ab926931b0-1200x900.png" alt="UI/UX">
-                                    <h2 class="bold-text" style="margin-top: 20px;">UI/UX</h2>
-                                    <p class="p-text" style="margin-top: 10px;">Talented UI/UX designer crafting exceptional user experiences</p>
-                                </div>
-                                <div class="app__profile-item" style="opacity: 1; transform: none;" >
-                                    <img src="https://cdn.sanity.io/images/ujq3tlvc/production/db53adca404b7410a2869db815e4ce77da2e7e53-1200x900.png" alt="UI/UX">
-                                    <h2 class="bold-text" style="margin-top: 20px;">Web Development</h2>
-                                    <p class="p-text" style="margin-top: 10px;">Experienced web developer skilled at driving growth</p>
-                                </div>
-                          
-                            </div>
-                            <div>
+/* sections */
+section{padding-top:clamp(3rem,7vw,5.5rem)}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--line);padding-bottom:.8rem;margin-bottom:1.6rem}
+.sh h2{margin:0;font-size:1.5rem}
+.sh span{color:var(--dim);font-size:.9rem}
 
-                            </div>
-                            
-                        </div
-                        ><div class="app__navigation">
-                            <a href="#home" class="app__navigation-dot"></a>
-                            <a href="#about" class="app__navigation-dot" style="background-color: rgb(49, 59, 172);"></a>
-                            <a href="#work" class="app__navigation-dot"></a>
-                            <a href="#skills" class="app__navigation-dot"></a>
-                            <a href="#contact" class="app__navigation-dot"></a>
-                        </div>
-                    </div>
-                    <div id="work" class="app__container app__primarybg">
-                        <div class="app__social">
-                            <div>
-                            <a href="https://x.com/drexstargamin">
-                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
-                                </svg>
-                            </a>
-                        </div>
-                        <div>
-                            <a href="https://www.linkedin.com/in/adesanya-david-78212a2a7/">
-                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z"></path>
-                                </svg>
-                            </a>
-                        </div>
-                   
-                                <div>
-                                    <a href="https://github.com/DavidAdeboye">
-                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64">
-                                            <path d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"></path>
-                                            </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="app__wrapper app__flex">
-                                <div class="app__works app__flex">
-                                    <h2 class="head-text">My Creative <span>Portfolio</span> Section</h2>
-                                    <div class="app__work-filter">
-                                        <div class="app__work-filter-item app__flex p-text" data-filter="websites">Web Apps</div>
-                                        <div class="app__work-filter-item app__flex p-text item-active" data-filter="all">All</div>
-                                    </div>
-                                    <div class="app__work-portfolio" id="app__work-portfolio">
-                                        
-                                
-                                        <div class="project" data-category="websites">
-                                            <div class="app__work-item app__flex">
-                                                <div class="app__work-img app__flex">
-                                                    <a href="https://davidadeboye.github.io/Dangy/" style="text-decoration: none;" > 
-                                                    <img src="animewebbanner.png" alt="Anime Website Banner">
-                                                    <div class="app__work-hover app__flex">
-                                                        
-                                                              
-                                                        
-                                                    </div>
-                                                </div>
-                                                <div class="app__work-content app__flex">
-                                                    <h4 class="bold-text">Dangy</h4>
-                                                    <p class="p-text" style="margin-top: 10px;">Discover Dangy, the ultimate anime website for fans. (Project still in development)</p>
-                                                    <div class="app__work-tag app__flex">
-                                                        <p class="p-text">Website</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        </div>
-                                        <div class="project" data-category="websites">
-                                            <div class="app__work-item app__flex">
-                                                <div class="app__work-img app__flex">
-                                                    <a href="https://metaldnessplayschess.vercel.app/" target="_blank" rel="noreferrer" style="text-decoration: none;">
-                                                        <img src="chessdesign.png" alt="AstraWebCrafts Banner">
-                                                        <div class="app__work-hover app__flex">
-                                                            <!-- You can add hover content here if needed -->
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="app__work-content app__flex">
-                                                    <h4 class="bold-text">Chess</h4>
-                                                    <p class="p-text" style="margin-top: 10px;">Play chess against an incredible AI i built using ReactJs.</p>
-                                                    <div class="app__work-tag app__flex">
-                                                        <p class="p-text">Website</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="project" data-category="websites">
-                                            <div class="app__work-item app__flex">
-                                                <div class="app__work-img app__flex">
-                                                    <a href="https://davidadeboye.github.io/Pottery/" target="_blank" rel="noreferrer" style="text-decoration: none;">
-                                                        <img src="Potteryimg.png" alt="AstraWebCrafts Banner">
-                                                        <div class="app__work-hover app__flex">
-                                                            <!-- You can add hover content here if needed -->
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="app__work-content app__flex">
-                                                    <h4 class="bold-text">Pottery Class</h4>
-                                                    <p class="p-text" style="margin-top: 10px;">"Created an engaging landing page for a pottery class that showcases courses and products with a streamlined sign-up process.".</p>
-                                                    <div class="app__work-tag app__flex">
-                                                        <p class="p-text">Website</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="project" data-category="websites">
-                                            <div class="app__work-item app__flex">
-                                                <div class="app__work-img app__flex">
-                                                    <a href="https://davidadeboye.github.io/Taskmanager/" style="text-decoration: none;">  
-                                                <img src="todolist.png">
-                                                <div class="app__work-hover app__flex" style="opacity: 0;">
-                                               
-                                            </div>
-                                        </div>
-                                        <div class="app__work-content app__flex">
-                                            <h4 class="bold-text">Task Manager</h4>
-                                            <p class="p-text" style="margin-top: 10px;">Talented UI/UX designer crafting exceptional user experiences</p>
-                                            <div class="app__work-tag app__flex">
-                                                <p class="p-text">Website</p>
-                                            </div>
-                                        </div>
-                                    </a>
-                                    </div>
-                                        </div>
-                                        <div class="project" data-category="websites">
-                                            <div class="app__work-item app__flex">
-                                                <div class="app__work-img app__flex">
-                                                    <a href="https://davidadeboye.github.io/DavidAdeboye/" target="_blank" rel="noreferrer" style="text-decoration: none;">
-                                                        <img src="Designer (1).jpeg" alt="AstraWebCrafts Banner">
-                                                        <div class="app__work-hover app__flex">
-                                                            <!-- You can add hover content here if needed -->
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="app__work-content app__flex">
-                                                    <h4 class="bold-text">RESUME BUILDER</h4>
-                                                    <p class="p-text" style="margin-top: 10px;">Created a website that drafts the perfect resume in seconds</p>
-                                                    <div class="app__work-tag app__flex">
-                                                        <p class="p-text">Website</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                     
-                                        <div class="project" data-category="websites">
-                                            <div class="app__work-item app__flex">
-                                                <div class="app__work-img app__flex">
-                                                    <a href="index.html" target="_blank" rel="noreferrer" style="text-decoration: none;">
-                                                        <img src="portfolioimg2.png" alt="AstraWebCrafts Banner">
-                                                        <div class="app__work-hover app__flex">
-                                                            <!-- You can add hover content here if needed -->
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="app__work-content app__flex">
-                                                    <h4 class="bold-text">My Portfolio</h4>
-                                                    <p class="p-text" style="margin-top: 10px;">Experienced web developer skilled at driving growth.</p>
-                                                    <div class="app__work-tag app__flex">
-                                                        <p class="p-text">Website</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                       
-                                        <div class="project" data-category="websites">
-                                            <div class="app__work-item app__flex">
-                                                <div class="app__work-img app__flex">
-                                                    <a href="https://astrawebcrafts.pxxl.space/" target="_blank" rel="noreferrer" style="text-decoration: none;">
-                                                        <img src="pikaso_texttoimage_Generate-an-image-representing-the-services-offere.jpeg" alt="AstraWebCrafts Banner">
-                                                        <div class="app__work-hover app__flex">
-                                                            <!-- You can add hover content here if needed -->
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="app__work-content app__flex">
-                                                    <h4 class="bold-text">AstraWebCrafts</h4>
-                                                    <p class="p-text" style="margin-top: 10px;">AstraWebCrafts provides premium websites, video production, SEO.</p>
-                                                    <div class="app__work-tag app__flex">
-                                                        <p class="p-text">Website</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </div>
-                                       
-                                       
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            
-                                    <div class="app__navigation">
-                                        <a href="#home" class="app__navigation-dot"></a>
-                                        <a href="#about" class="app__navigation-dot"></a>
-                                        <a href="#work" class="app__navigation-dot" style="background-color: rgb(49, 59, 172);"></a>
-                                        <a href="#skills" class="app__navigation-dot"></a>
-                                        <a href="#contact" class="app__navigation-dot"></a>
-                                    </div>
-                                </div>
-                                <div id="skills" class="app__container app__whitebg">
-                                    <div class="app__social">
-                                    <div>
-                                        <a href="https://x.com/drexstargamin">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <a href="https://www.linkedin.com/in/adesanya-david-78212a2a7/">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                  
-                                    <div>
-                                        <a href="https://github.com/DavidAdeboye">
-                                            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64">
-                                                <path d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"></path>
-                                                </svg>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="app__wrapper app__flex">
-                                    <div class="app__skills app__flex" style="opacity: 1; transform: none;">
-                                        <h2 class="head-text">Skills &amp; Experiences</h2>
-                                        <div class="app__skills-container">
-                                            <div class="app__skills-list">
-                                                <div class="app__skills-item app__flex" style="opacity: 1;">
-                                                    <div class="app__flex">
-                                                        <img src="https://cdn.sanity.io/images/ujq3tlvc/production/31f11147f89dbd855a9b948e2ce643ea2f41c0a9-480x480.png" alt="HTML">
-                                                    </div>
-                                                    <p class="p-text">HTML</p>
-                                                </div>
-                                                <div class="app__skills-item app__flex" style="opacity: 1;">
-                                                    <div class="app__flex">
-                                                        <img src="https://cdn.sanity.io/images/ujq3tlvc/production/66bbf9242b1ccffebb5d46f376f5036b527fad48-480x480.png" alt="Java Script">
-                                                    </div>
-                                                    <p class="p-text">Java Script</p>
-                                                </div>
-                                                <div class="app__skills-item app__flex" style="opacity: 1;">
-                                                    <div class="app__flex">
-                                                        <img src="https://cdn.sanity.io/images/ujq3tlvc/production/6551e520e801ab656029527c09265981c06dce33-480x480.png" alt="Figma">
-                                                    </div>
-                                                    <p class="p-text">Figma</p>
-                                                </div>
-                                                <div class="app__skills-item app__flex" style="opacity: 1;">
-                                                    <div class="app__flex">
-                                                        <img src="https://cdn.iconscout.com/icon/free/png-512/free-react-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-vol-5-pack-logos-icons-2945110.png?f=webp&w=256" alt="SCSS">
-                                                    </div>
-                                                    <p class="p-text">React</p>
-                                                </div>
+/* stack */
+.stack{display:grid;gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+@media(min-width:760px){.stack{grid-template-columns:repeat(3,1fr)}}
+.stack div{padding:1.1rem 1.2rem;border-bottom:1px solid var(--line)}
+@media(min-width:760px){.stack div{border-right:1px solid var(--line)}.stack div:nth-child(3n){border-right:0}.stack div:nth-last-child(-n+3){border-bottom:0}}
+.stack div:last-child{border-bottom:0}
+.stack dt{font-size:.85rem;color:var(--dim);margin-bottom:.5rem}
+.stack dd{margin:0;display:flex;flex-wrap:wrap;gap:.35rem}
+.stack span{font-size:.9rem;background:var(--panel);border:1px solid var(--line);border-radius:5px;padding:.1rem .55rem;transition:border-color .2s,color .2s}
+.stack span:hover{border-color:var(--red);color:var(--red)}
 
-                                                <div class="app__skills-item app__flex" style="opacity: 1;">
-                                                    <div class="app__flex">
-                                                        <img src="https://cdn.sanity.io/images/ujq3tlvc/production/a804a741fb26f6c236c73086a87cfc9f64106401-480x480.png" alt="Git">
-                                                    </div>
-                                                    <p class="p-text">Git</p>
-                                                </div>
-                                                <div class="app__skills-item app__flex" style="opacity: 1;">
-                                                    <div class="app__flex">
-                                                        <img src="https://cdn.sanity.io/images/ujq3tlvc/production/107574d887f1c07c9fbea0704de7f293e244a8f3-480x480.png" alt="CSS">
-                                                    </div>
-                                                    <p class="p-text">CSS</p>
-                                                </div>
-                                                <div class="app__skills-item app__flex" style="opacity: 1;">
-                                                    <div class="app__flex">
-                                                        <img src="https://cdn.sanity.io/images/ujq3tlvc/production/2825d163301127c72b6121baebb5e570689596e5-480x480.png" alt="SCSS">
-                                                    </div>
-                                                    <p class="p-text">SCSS</p>
-                                                </div>
-                                                <div class="app__skills-item app__flex" style="opacity: 1;">
-                                                    <div class="app__flex">
-                                                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/WordPress_blue_logo.svg" alt="SCSS">
-                                                    </div>
-                                                    <p class="p-text">Wordpress</p>
-                                                </div>
-                                               
-                                            </div>
-                                            <div class="app__skills-exp">
-                                                <div class="app__skills-exp-item">
-                                                    <div class="app__skills-exp-year">
-                                                        <p class="bold-text">2022/23</p>
-                                                    </div><div class="app__skills-exp-works">
-                                                        <div class="app__skills-exp-work" data-tip="true" data-for="Web Design &amp; Development" style="opacity: 1;">
-                                                            <h4 class="bold-text">Frontend Web Design &amp; Development</h4>
-                                                            <p class="p-text">Udemy</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="app__skills-exp-item">
-                                                    <div class="app__skills-exp-year">
-                                                        <p class="bold-text">2023</p>
-                                                    </div>
-                                                    <div class="app__skills-exp-works">
-                                                        <div class="app__skills-exp-work" data-tip="true" data-for="Mobile Application" style="opacity: 1;">
-                                                            <h4 class="bold-text">FullStack web development</h4>
-                                                            <p class="p-text">Udemy</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="app__skills-exp-item">
-                                                    <div class="app__skills-exp-year">
-                                                        <p class="bold-text">2022/23</p>
-                                                    </div>
-                                                    <div class="app__skills-exp-works">
-                                                        <div class="app__skills-exp-work" data-tip="true" data-for="PC Repair" style="opacity: 1;">
-                                                            <h4 class="bold-text">HTML</h4
-                                                                ><p class="p-text">Sololearn</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="app__skills-exp-item">
-                                                        <div class="app__skills-exp-year">
-                                                            <p class="bold-text">2023</p>
-                                                        </div>
-                                                        <div class="app__skills-exp-works">
-                                                            <div class="app__skills-exp-work" data-tip="true" data-for="UI/UX" style="opacity: 1;">
-                                                                <h4 class="bold-text">UI/UX</h4>
-                                                                <p class="p-text">Tender</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="app__skills-exp-item">
-                                                        <div class="app__skills-exp-year">
-                                                            <p class="bold-text">2023/24</p>
-                                                        </div>
-                                                        <div class="app__skills-exp-works">
-                                                            <div class="app__skills-exp-work" data-tip="true" data-for="UI/UX" style="opacity: 1;">
-                                                                <h4 class="bold-text">Backend Web Development</h4>
-                                                                <p class="p-text">Udemy</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                    </div>
-                                    <div>
+/* work */
+.pj{display:grid;gap:1.4rem;padding:2rem 0;border-bottom:1px solid var(--line)}
+.pj:first-of-type{padding-top:.4rem}
+@media(min-width:900px){.pj{grid-template-columns:5fr 7fr;gap:3rem;align-items:center}.pj:nth-child(even) .tx{order:2}}
+.pj h3{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.05;margin:.6rem 0 .6rem}
+.st{display:inline-flex;align-items:center;gap:.5rem;font-size:.85rem;color:var(--dim)}
+.st i{width:.55rem;height:.55rem;border-radius:50%;border:1.5px solid var(--dim)}
+.st.live i{background:var(--red);border-color:var(--red);animation:pu 1.6s infinite}
+.st.ship i{background:var(--ok);border-color:var(--ok)}
+.st.bld i{border-style:dashed}
+.tx p{color:var(--dim);max-width:42ch}
+.ch{display:flex;flex-wrap:wrap;gap:.35rem;list-style:none;padding:0;margin:0 0 1.2rem}
+.ch li{font-size:.85rem;border:1px solid var(--line);border-radius:5px;padding:.05rem .55rem}
+.lnk{display:inline-block;font-weight:500;text-decoration:none;border-bottom:1.5px solid var(--red);padding-bottom:1px}
+.lnk:hover{color:var(--red)}
+.vz{border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem;min-height:250px;display:flex;flex-direction:column;justify-content:center}
+.win{font-size:.8rem;color:var(--dim);display:flex;align-items:center;gap:.4rem;margin-bottom:.9rem}
+.win i{width:.55rem;height:.55rem;border-radius:50%;background:var(--line)}
+.win span{margin-left:.5rem}
+.or{display:grid;grid-template-columns:auto 1fr auto;gap:.8rem;align-items:center;padding:.6rem 0;border-top:1px solid var(--line)}
+.or:first-of-type{border-top:0}
+.av{width:1.9rem;height:1.9rem;border-radius:50%;background:var(--line)}
+.sk1{height:.55rem;border-radius:4px;background:var(--line);margin:.2rem 0}
+.sk1.s{width:55%;opacity:.6}
+.tagp{font-size:.78rem;border:1px solid var(--dim);border-radius:99px;padding:0 .6rem;color:var(--fg)}
+.tagp.ok{border-color:var(--ok);color:var(--ok)}
+.bars{display:grid;gap:.9rem}
+.bars div{display:grid;grid-template-columns:70px 1fr;gap:.8rem;align-items:center;font-size:.85rem;color:var(--dim)}
+.bars b{display:block;height:.9rem;border-radius:3px;background:var(--line);position:relative;overflow:hidden}
+.bars b::after{content:"";position:absolute;inset:0;width:0;background:var(--red);transition:width 1.2s cubic-bezier(.2,.9,.2,1)}
+.in .bars b::after{width:var(--v)}
+.note{font-size:.78rem;color:var(--dim);margin:1rem 0 0}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.duo svg{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:var(--bg)}
+.duo text{font:500 9px Geist,sans-serif;fill:var(--dim)}
+.duo .n{fill:var(--panel);stroke:var(--fg);stroke-width:1.2}
+.duo .h{fill:var(--red);stroke:none}
+.duo .p{stroke:var(--line);stroke-width:1.2;fill:none}
+.duo .lk{stroke:var(--red);stroke-width:1.5;stroke-dasharray:4 4;animation:da 1.2s linear infinite}
+@keyframes da{to{stroke-dashoffset:-16}}
 
-                                    </div>
-                                </div>
-                                
-                                <div class="app__navigation">
-                                    <a href="#home" class="app__navigation-dot">
+/* about */
+.ab{display:grid;gap:1.5rem 4rem}
+@media(min-width:800px){.ab{grid-template-columns:1.4fr 1fr}}
+.ab p{color:var(--dim);max-width:56ch}
+.ab p b{color:var(--fg);font-weight:500}
+.ml{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.ml li{border-bottom:1px solid var(--line)}
+.ml a,.ml .r{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.15rem 1.5rem;padding:.9rem 0;text-decoration:none;transition:color .2s,padding .2s}
+.ml b{font-weight:500;font-size:1.05rem}
+.ml span{color:var(--dim);font-size:.92rem}
+.ml a:hover{color:var(--red);padding-left:.5rem}
+.ml a:hover span{color:inherit}
+.fx{margin:0;border-top:1px solid var(--line)}
+.fx div{display:flex;justify-content:space-between;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.fx dt{color:var(--dim)}.fx dd{margin:0;text-align:right}
 
-                                    </a>
-                                    <a href="#about" class="app__navigation-dot"></a>
-                                    <a href="#work" class="app__navigation-dot"></a>
-                                    <a href="#skills" class="app__navigation-dot" style="background-color: rgb(49, 59, 172);"></a>
-                                    <a href="#contact" class="app__navigation-dot"></a>
-                                </div>
-                            </div>
-                            <div class="app__container undefined">
-                                <div class="app__social">
-                                    <div>
-                                        <a href="https://x.com/drexstargamin">
-                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"
-                                            ><path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="https://www.linkedin.com/in/adesanya-david-78212a2a7/">
-                                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z"></path>
-                                        </svg>
-                                    </a>
-                                </div>
-                         
-                                <div>
-                                    <a href="https://github.com/DavidAdeboye">
-                                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="64" height="64" viewBox="0 0 64 64">
-                                            <path d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z"></path>
-                                            </svg>
-                                    </a>
-                                </div>
-                            </div>
-                           
+/* contact */
+.cx h2{font-size:clamp(1.9rem,4.4vw,3.2rem);line-height:1.05;margin-bottom:1.5rem;max-width:18ch}
+.tl{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,265px),1fr))}
+.tl a{min-width:0;display:flex;flex-direction:column;gap:.15rem;border:1px solid var(--line);border-radius:8px;background:var(--panel);padding:1rem 1.15rem;text-decoration:none;transition:border-color .2s,translate .2s}
+.tl a:hover{border-color:var(--red);translate:0 -3px}
+.tl small{color:var(--dim);font-size:.85rem}
+.tl b{font-weight:500;font-size:1rem;overflow-wrap:anywhere}
+.ft{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.6rem;padding:3rem 0 2rem;color:var(--dim);font-size:.88rem}
 
-                           
-                          
-                       
-                        <div id="contact" class="app__container app__whitebg">
-                           
-                            <div class="app__wrapper app__flex">
-                                <div class="app__footer app__flex">
-                                    <h2 class="head-text">Take a coffee &amp; chat with me</h2>
-                                    <div class="app__footer-cards">
-                                        <div class="app__footer-card ">
-                                            <img src="gmail-svgrepo-com.svg" alt="email">
-                                            <a href="mailto:davidadeboye47@gmail.com" class="p-text">davidadeboye47@gmail.com</a>
-                                        </div>
-                                        <div class="app__footer-card">
-                                            <img src="tel.png" alt="phone">
-                                            <a href="tel:+234 (806) 032-1615" class="p-text">+234 (806) 032-1615</a>
-                                        </div>
-                                    </div>
-                                    <div class="app__footer-form app__flex">
-                                        <div class="app__flex">
-                                            <input class="p-text" type="text" placeholder="Your Name" name="username" id="username">
-                                        </div>
-                                        <div class="app__flex">
-                                            <input class="p-text" type="email" placeholder="Your Email" name="email" id="email">
-                                        </div>
-                                        <div>
-                                            <textarea class="p-text" placeholder="Your Message" name="message" id="message"></textarea>
-                                        </div>
-                                        <button type="button" class="p-text" id="send-button">Send Message</button>
-                                    </div>
-                                    <div id="confirmation-message" style="display:none;">Your message has been sent!</div>
-                                    
-                                </div>
-                                <div>
+/* palette */
+.ov{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.55);display:none;align-items:flex-start;justify-content:center;padding:14vh 1rem 1rem}
+.ov.on{display:flex}
+.pal{width:100%;max-width:520px;background:var(--bg);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.pal input{width:100%;background:none;border:0;border-bottom:1px solid var(--line);color:var(--fg);font:inherit;padding:1rem 1.1rem;outline:none}
+.pal ul{list-style:none;margin:0;padding:.4rem;max-height:50vh;overflow:auto}
+.pal li{display:flex;justify-content:space-between;gap:1rem;padding:.6rem .7rem;border-radius:6px;cursor:pointer;font-size:.95rem}
+.pal li small{color:var(--dim)}
+.pal li[aria-selected="true"]{background:var(--panel);box-shadow:inset 2px 0 var(--red)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Main"><div class="w">
+  <a class="logo d" href="#top">David Adesanya</a>
+  <div class="links"><a href="#work">Work</a><a href="#stack">Stack</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <div class="nr"><span id="clock">Lagos</span><button class="kbd" id="kb" aria-label="Open quick menu">Ctrl K</button></div>
+</div></nav>
 
-                                </div>
-                            </div>
-                            <div class="app__navigation">
-                                <a href="#home" class="app__navigation-dot">
-                                    
-                                </a>
-                                <a href="#about" class="app__navigation-dot">
-                                </a>
-                                <a href="#work" class="app__navigation-dot">
-                                </a>
-                                <a href="#skills" class="app__navigation-dot">
-                                </a>
-                                <a href="#contact" class="app__navigation-dot" style="background-color: rgb(49, 59, 172);"></a></div></div></div>
-                            </div>
-                            <script src="script.js"></script>
+<header class="hero" id="top"><div class="w"><div class="hg">
+  <div>
+    <span class="pill"><i></i>Open to internships and contract work</span>
+    <h1 class="d">Full-stack and AI engineer.</h1>
+    <p class="sub">I build products <b>end to end</b>, from the database to the interface, and I ship them.</p>
+    <div class="cta"><a class="btn f" href="#work">See the work</a><a class="btn" href="#contact">Get in touch</a></div>
+    <ul class="meta"><li>Lagos, Nigeria</li><li>CS, year three, LASU</li><li>Studio: AstraWebCrafts</li></ul>
+  </div>
+  <figure class="sig" style="margin:0">
+    <canvas id="cv" role="img" aria-label="Animated chart: a noisy line with a smooth signal line drawn through it"></canvas>
+    <figcaption class="cap"><span>Signal</span><span>Noise <em id="rd">move your cursor</em></span></figcaption>
+  </figure>
+</div></div></header>
 
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        </body>
-        </html>
+<main>
+<div class="w">
+  <section id="work" aria-labelledby="hw">
+    <div class="sh"><h2 class="d" id="hw">Selected work</h2><span>Featured and past</span></div>
+
+    <article class="pj">
+      <div class="tx"><span class="st live"><i></i>Live</span><h3 class="d">Tailora</h3>
+        <p>SaaS platform for tailoring businesses to manage orders, clients and payments in one place.</p>
+        <ul class="ch"><li>Next.js</li><li>Supabase</li><li>Vercel</li></ul><a class="lnk" href="https://tailora.ng">Visit tailora.ng</a></div>
+      <div class="vz" aria-hidden="true"><div class="win"><i></i><i></i><i></i><span>tailora.ng / orders</span></div>
+        <div class="or"><div class="av"></div><div><div class="sk1"></div><div class="sk1 s"></div></div><span class="tagp ok">Paid</span></div>
+        <div class="or"><div class="av"></div><div><div class="sk1"></div><div class="sk1 s"></div></div><span class="tagp">Cutting</span></div>
+        <div class="or"><div class="av"></div><div><div class="sk1"></div><div class="sk1 s"></div></div><span class="tagp">Fitting</span></div>
+        <div class="or"><div class="av"></div><div><div class="sk1"></div><div class="sk1 s"></div></div><span class="tagp ok">Ready</span></div>
+      </div>
+    </article>
+
+    <article class="pj">
+      <div class="tx"><span class="st ship"><i></i>Shipped</span><h3 class="d">GEOTracker</h3>
+        <p>AI brand visibility tool tracking how brands get recommended across LLMs like Claude and GPT.</p>
+        <ul class="ch"><li>Cloudflare Workers</li><li>Groq</li><li>Paystack</li></ul></div>
+      <div class="vz" aria-hidden="true" id="geo"><div class="win"><i></i><i></i><i></i><span>Brand mentions by model</span></div>
+        <div class="bars"><div>Claude<b style="--v:78%"></b></div><div>GPT<b style="--v:62%"></b></div><div>Others<b style="--v:35%"></b></div></div>
+        <p class="note">Illustration, not real data.</p></div>
+    </article>
+
+    <article class="pj" style="border-bottom:0">
+      <div class="tx"><span class="st bld"><i></i>Building</span><h3 class="d">Aftersignal</h3>
+        <p>3D co-op multiplayer puzzle-exploration game built for Hack Club Stardance.</p>
+        <ul class="ch"><li>Godot 4</li><li>Multiplayer</li></ul></div>
+      <div class="vz" aria-hidden="true"><div class="duo">
+        <svg viewBox="0 0 160 120"><text x="8" y="14">Player A</text><path class="p" d="M30 90V60h40V34M70 60h50"/><circle class="n" cx="30" cy="90" r="7"/><circle class="n" cx="70" cy="34" r="7"/><circle class="h" cx="120" cy="60" r="7"/><path class="lk" d="M127 60H160"/></svg>
+        <svg viewBox="0 0 160 120"><text x="8" y="14">Player B</text><path class="p" d="M0 60h40V90h60V50M100 90h40"/><circle class="n" cx="40" cy="60" r="7"/><circle class="n" cx="100" cy="50" r="7"/><circle class="h" cx="140" cy="90" r="7"/><path class="lk" d="M0 60H33"/></svg>
+      </div><p class="note">Each player sees half the puzzle.</p></div>
+    </article>
+    <h3 class="d" style="font-size:1.2rem;margin:2.6rem 0 .9rem">Also built</h3>
+    <ul class="ml">
+      <li><div class="r"><b>ClipScout</b><span>Scores Whop clipping campaigns by payout, budget runway and crowding</span></div></li>
+      <li><a href="https://clipclan.netlify.app"><b>ClipClan</b><span>Podcast clipper that runs entirely in the browser</span></a></li>
+      <li><div class="r"><b>Docket</b><span>Swipe-based interface for job applications</span></div></li>
+      <li><div class="r"><b>Degen Log</b><span>Trading journal for memecoin trades</span></div></li>
+      <li><div class="r"><b>YouTube RAG chatbot</b><span>Answers from a creator's transcripts, refreshed by a daily ingest</span></div></li>
+      <li><div class="r"><b>Low-vision assistant</b><span>Assistive tool built at the GDGoc LASU Kaggle Hackathon</span></div></li>
+      <li><a href="https://metaldnessplayschess.vercel.app/"><b>Chess</b><span>Play against an AI opponent, built in React</span></a></li>
+      <li><a href="https://astrawebcrafts.pxxl.space/"><b>AstraWebCrafts</b><span>My studio: websites, video and SEO</span></a></li>
+    </ul>
+  </section>
+
+  <section id="stack" aria-labelledby="hs">
+    <div class="sh"><h2 class="d" id="hs">Stack</h2><span>What I build with</span></div>
+    <dl class="stack">
+      <div><dt>Frontend</dt><dd><span>Next.js</span><span>React</span><span>TypeScript</span><span>Tailwind</span></dd></div>
+      <div><dt>Backend</dt><dd><span>Node.js</span><span>FastAPI</span></dd></div>
+      <div><dt>Data</dt><dd><span>Supabase</span><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span></dd></div>
+      <div><dt>AI</dt><dd><span>LangChain</span></dd></div>
+      <div><dt>Games</dt><dd><span>Godot 4</span></dd></div>
+      <div><dt>Infra</dt><dd><span>Docker</span><span>AWS</span></dd></div>
+    </dl>
+  </section>
+
+  <section id="about" aria-labelledby="ha">
+    <div class="sh"><h2 class="d" id="ha">About</h2><span>Lagos, Nigeria</span></div>
+    <div class="ab">
+      <div>
+        <p>Third-year <b>Computer Science</b> student at Lagos State University, running a few lanes at once: my own products, freelance client work through my studio <b>AstraWebCrafts</b>, and internship applications.</p>
+        <p>I got into markets before I got serious about code. That habit of reading signal from noise still shapes how I scope and debug what I build.</p>
+      </div>
+      <dl class="fx">
+        <div><dt>Studying</dt><dd>Computer Science, LASU</dd></div>
+        <div><dt>Studio</dt><dd>AstraWebCrafts</dd></div>
+        <div><dt>Building</dt><dd>Aftersignal, Stardance</dd></div>
+        <div><dt>Open to</dt><dd>Internships, contract work</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="cx" id="contact" aria-labelledby="hc">
+    <div class="sh"><h2 class="d" id="hc">Contact</h2><span>Usually reply within a day</span></div>
+    <p class="d" style="font-size:clamp(1.9rem,4.4vw,3.2rem);line-height:1.05;margin:0 0 1.5rem;max-width:18ch">Got something worth building?</p>
+    <div class="tl">
+      <a href="mailto:davidadeboye47@gmail.com"><small>Email</small><b>davidadeboye47@gmail.com</b></a>
+      <a href="https://www.linkedin.com/in/adesanya-david-78212a2a7/"><small>LinkedIn</small><b>Adesanya David</b></a>
+      <a href="https://x.com/drexstargamin"><small>X / Twitter</small><b>@drexstargamin</b></a>
+      <a href="https://t.me/metaldness"><small>Telegram</small><b>@metaldness</b></a>
+      <a href="https://github.com/DavidAdeboye"><small>GitHub</small><b>DavidAdeboye</b></a>
+    </div>
+    <div class="ft"><span>&copy; 2026 David Adesanya</span><a href="#top">Back to top</a></div>
+  </section>
+</div>
+</main>
+
+<div class="ov" id="ov" role="dialog" aria-modal="true" aria-label="Quick menu"><div class="pal">
+  <input id="q" placeholder="Jump to..." autocomplete="off" aria-label="Search quick menu"><ul id="res" role="listbox"></ul>
+</div></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+/* signal canvas */
+const cv=$('#cv'),cx=cv.getContext('2d'),N=90;
+let W=0,H=0,mx=null,noise=[],sig=[],ph=0;
+const cs=()=>getComputedStyle(document.documentElement);
+function step(){ph+=.11;const t=Math.sin(ph)*.55+Math.sin(ph*.37)*.4;const last=noise.length?noise[noise.length-1]:0;const v=t*.6+(Math.random()-.5)*1.1;noise.push(v);if(noise.length>N)noise.shift();
+  sig=noise.map((_,i)=>{let s=0,c=0;for(let k=Math.max(0,i-9);k<=i;k++){const w=1+(k-(i-9))/9;s+=noise[k]*w;c+=w}return s/c})}
+for(let i=0;i<N;i++)step();
+function size(){const r=cv.getBoundingClientRect(),d=devicePixelRatio||1;W=r.width;H=r.height;cv.width=W*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0)}
+const Y=v=>H/2-v*H*.3;
+function draw(){
+  const c=cs(),line=c.getPropertyValue('--line').trim(),dim=c.getPropertyValue('--dim').trim(),red=c.getPropertyValue('--red').trim();
+  cx.clearRect(0,0,W,H);cx.lineWidth=1;cx.strokeStyle=line;
+  for(let i=1;i<6;i++){cx.beginPath();cx.moveTo(0,H*i/6);cx.lineTo(W,H*i/6);cx.stroke()}
+  for(let i=1;i<10;i++){cx.beginPath();cx.moveTo(W*i/10,0);cx.lineTo(W*i/10,H);cx.stroke()}
+  const X=i=>i/(N-1)*W;
+  cx.lineWidth=1.2;cx.strokeStyle=dim;cx.beginPath();noise.forEach((v,i)=>i?cx.lineTo(X(i),Y(v)):cx.moveTo(X(i),Y(v)));cx.stroke();
+  cx.lineWidth=2.6;cx.strokeStyle=red;cx.beginPath();sig.forEach((v,i)=>i?cx.lineTo(X(i),Y(v)):cx.moveTo(X(i),Y(v)));cx.stroke();
+  if(mx!==null){const i=Math.round(mx/W*(N-1));cx.strokeStyle=dim;cx.lineWidth=1;cx.setLineDash([3,4]);cx.beginPath();cx.moveTo(X(i),0);cx.lineTo(X(i),H);cx.stroke();cx.setLineDash([]);
+    cx.fillStyle=dim;cx.beginPath();cx.arc(X(i),Y(noise[i]),3.5,0,7);cx.fill();cx.fillStyle=red;cx.beginPath();cx.arc(X(i),Y(sig[i]),5,0,7);cx.fill();
+    $('#rd').textContent=(noise[i]>=0?'+':'')+noise[i].toFixed(2)+' / signal '+(sig[i]>=0?'+':'')+sig[i].toFixed(2)}
+}
+let last=0;
+function loop(t){if(t-last>110){step();last=t}draw();requestAnimationFrame(loop)}
+size();addEventListener('resize',()=>{size();draw()});
+cv.addEventListener('pointermove',e=>{mx=e.clientX-cv.getBoundingClientRect().left;if(rm)draw()});
+cv.addEventListener('pointerleave',()=>{mx=null;$('#rd').textContent='move your cursor';if(rm)draw()});
+if(rm)draw();else requestAnimationFrame(loop);
+
+/* reveal bars */
+new IntersectionObserver((es,o)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}}),{threshold:.4}).observe($('#geo'));
+
+/* scroll spy */
+const ls=$$('.links a');
+const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)ls.forEach(a=>a.setAttribute('aria-current',String(a.getAttribute('href')==='#'+e.target.id)))}),{rootMargin:'-45% 0px -50% 0px'});
+$$('section[id]').forEach(s=>spy.observe(s));
+
+/* quick menu */
+const items=[["Email","davidadeboye47@gmail.com","mailto:davidadeboye47@gmail.com"],["LinkedIn","Adesanya David","https://www.linkedin.com/in/adesanya-david-78212a2a7/"],["Work","Section","#work"],["Stack","Section","#stack"],["About","Section","#about"],["Contact","Section","#contact"],["Tailora","tailora.ng","https://tailora.ng"],["X / Twitter","@drexstargamin","https://x.com/drexstargamin"],["Telegram","@metaldness","https://t.me/metaldness"],["GitHub","DavidAdeboye","https://github.com/DavidAdeboye"]];
+const ov=$('#ov'),q=$('#q'),res=$('#res');let sel=0,cur=items;
+function render(){res.innerHTML=cur.map((x,i)=>'<li role="option" data-i="'+i+'" aria-selected="'+(i===sel)+'"><span>'+x[0]+'</span><small>'+x[1]+'</small></li>').join('')||'<li><small>No matches</small></li>'}
+function open(){ov.classList.add('on');q.value='';cur=items;sel=0;render();q.focus()}
+function close(){ov.classList.remove('on')}
+function go(x){close();if(x[2][0]==='#')location.hash=x[2];else if(x[2].startsWith('mailto:'))location.href=x[2];else open_(x[2])}
+function open_(u){window.open(u,'_blank','noopener')}
+$('#kb').onclick=open;
+addEventListener('keydown',e=>{
+  if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();ov.classList.contains('on')?close():open()}
+  else if(ov.classList.contains('on')){
+    if(e.key==='Escape')close();
+    else if(e.key==='ArrowDown'){e.preventDefault();sel=Math.min(cur.length-1,sel+1);render()}
+    else if(e.key==='ArrowUp'){e.preventDefault();sel=Math.max(0,sel-1);render()}
+    else if(e.key==='Enter'&&cur[sel])go(cur[sel])}
+});
+q.addEventListener('input',()=>{const v=q.value.toLowerCase();cur=items.filter(x=>(x[0]+x[1]).toLowerCase().includes(v));sel=0;render()});
+res.addEventListener('click',e=>{const li=e.target.closest('li[data-i]');if(li)go(cur[li.dataset.i])});
+ov.addEventListener('click',e=>{if(e.target===ov)close()});
+
+function tick(){try{$('#clock').textContent='Lagos '+new Date().toLocaleTimeString('en-GB',{timeZone:'Africa/Lagos',hour:'2-digit',minute:'2-digit'})}catch(e){}}
+tick();setInterval(tick,30000);
+</script>
+</body>
+</html>
