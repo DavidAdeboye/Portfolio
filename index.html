@@ -135,6 +135,15 @@ section{padding-top:clamp(3rem,7vw,5.5rem)}
 .ml span{color:var(--dim);font-size:.92rem}
 .ml a:hover{color:var(--red);padding-left:.5rem}
 .ml a:hover span{color:inherit}
+.xp{display:grid;gap:.6rem 2.5rem;padding:1.6rem 0;border-top:1px solid var(--line)}
+@media(min-width:800px){.xp{grid-template-columns:250px 1fr}}
+.xp:last-of-type{border-bottom:1px solid var(--line)}
+.xp h3{font-size:1.4rem;line-height:1.1;margin:0 0 .3rem}
+.xp .rl{font-weight:500}
+.xp .dt{color:var(--dim);font-size:.9rem}
+.xp ul{list-style:none;padding:0;margin:0}
+.xp li{position:relative;padding-left:1.2rem;margin-bottom:.45rem;color:var(--dim);max-width:62ch}
+.xp li::before{content:"";position:absolute;left:0;top:.65em;width:.45rem;height:.45rem;border-radius:50%;background:var(--red)}
 .fx{margin:0;border-top:1px solid var(--line)}
 .fx div{display:flex;justify-content:space-between;gap:1rem;padding:.75rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
 .fx dt{color:var(--dim)}.fx dd{margin:0;text-align:right}
@@ -163,7 +172,7 @@ section{padding-top:clamp(3rem,7vw,5.5rem)}
 <body>
 <nav class="nav" aria-label="Main"><div class="w">
   <a class="logo d" href="#top">David Adesanya</a>
-  <div class="links"><a href="#work">Work</a><a href="#stack">Stack</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <div class="links"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#stack">Stack</a><a href="#about">About</a><a href="#contact">Contact</a></div>
   <div class="nr"><span id="clock">Lagos</span><button class="kbd" id="kb" aria-label="Open quick menu">Ctrl K</button></div>
 </div></nav>
 
@@ -188,7 +197,7 @@ section{padding-top:clamp(3rem,7vw,5.5rem)}
 
     <article class="pj">
       <div class="tx"><span class="st live"><i></i>Live</span><h3 class="d">Tailora</h3>
-        <p>SaaS platform for tailoring businesses to manage orders, clients and payments in one place.</p>
+        <p>Startup project I work on with a small team: a SaaS platform for tailoring businesses to manage orders, clients and payments in one place.</p>
         <ul class="ch"><li>Next.js</li><li>Supabase</li><li>Vercel</li></ul><a class="lnk" href="https://tailora.ng">Visit tailora.ng</a></div>
       <div class="vz" aria-hidden="true"><div class="win"><i></i><i></i><i></i><span>tailora.ng / orders</span></div>
         <div class="or"><div class="av"></div><div><div class="sk1"></div><div class="sk1 s"></div></div><span class="tagp ok">Paid</span></div>
@@ -229,6 +238,32 @@ section{padding-top:clamp(3rem,7vw,5.5rem)}
     </ul>
   </section>
 
+    <section id="experience" aria-labelledby="he">
+    <div class="sh"><h2 class="d" id="he">Experience</h2><span>Internships and startup work</span></div>
+    <div class="xp"><div><h3 class="d">BlockCred</h3><div class="rl">Software Engineer Intern</div><div class="dt">Jan 2025 to Apr 2025</div></div><ul>
+      <li>Integrated 3+ REST APIs for secure digital credential storage and retrieval</li>
+      <li>Cut page load time by 35% using lazy loading, code splitting and compression</li>
+      <li>Improved mobile responsiveness by optimizing the frontend in Next.js and Tailwind CSS</li>
+</ul></div>
+    <div class="xp"><div><h3 class="d">NovaTech Solutions</h3><div class="rl">Full Stack Developer</div><div class="dt">Jun 2024 to Aug 2024</div></div><ul>
+      <li>Built and deployed a chatbot UI with Next.js and Node.js, improving user engagement by 30%</li>
+      <li>Integrated the OpenAI API and LangChain to power conversational workflows</li>
+      <li>Automated CI/CD pipelines, reducing rollout time by 25%</li>
+</ul></div>
+    <div class="xp"><div><h3 class="d">CodeSphere Labs</h3><div class="rl">Junior Software Developer</div><div class="dt">Jan 2024 to Jun 2024</div></div><ul>
+      <li>Co-developed a real-time collaborative coding platform with React and Node.js</li>
+      <li>Built RESTful authentication and authorization APIs, cutting login failures by 20%</li>
+      <li>Optimized MongoDB queries with indexing and caching, reducing latency by 35%</li>
+</ul></div>
+    <div class="xp"><div><h3 class="d">Empower Match</h3><div class="rl">Junior Software Developer</div><div class="dt">Aug 2023 to Nov 2023</div></div><ul>
+      <li>Built the website for Empower Match, a startup platform that connects people with disabilities, including blind, deaf and low-vision users, to software that helps them use technology more easily</li>
+      <li>Worked in a small team on the project, which received grant funding during development</li>
+</ul></div>
+    <div class="xp"><div><h3 class="d">Lagos State University</h3><div class="rl">BSc Computer Science</div><div class="dt">Oct 2024 to Aug 2028</div></div><ul>
+      <li>Building products and freelance client work alongside my degree</li>
+</ul></div>
+  </section>
+
   <section id="stack" aria-labelledby="hs">
     <div class="sh"><h2 class="d" id="hs">Stack</h2><span>What I build with</span></div>
     <dl class="stack">
@@ -245,7 +280,7 @@ section{padding-top:clamp(3rem,7vw,5.5rem)}
     <div class="sh"><h2 class="d" id="ha">About</h2><span>Lagos, Nigeria</span></div>
     <div class="ab">
       <div>
-        <p>Third-year <b>Computer Science</b> student at Lagos State University, running a few lanes at once: my own products, freelance client work through my studio <b>AstraWebCrafts</b>, and internship applications.</p>
+        <p>Third-year <b>Computer Science</b> student at Lagos State University, running a few lanes at once: a startup project with a small team, my own builds, freelance client work through my studio <b>AstraWebCrafts</b>, and internship applications.</p>
         <p>I got into markets before I got serious about code. That habit of reading signal from noise still shapes how I scope and debug what I build.</p>
       </div>
       <dl class="fx">
@@ -317,7 +352,7 @@ const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)ls.for
 $$('section[id]').forEach(s=>spy.observe(s));
 
 /* quick menu */
-const items=[["Email","davidadeboye47@gmail.com","mailto:davidadeboye47@gmail.com"],["LinkedIn","Adesanya David","https://www.linkedin.com/in/adesanya-david-78212a2a7/"],["Work","Section","#work"],["Stack","Section","#stack"],["About","Section","#about"],["Contact","Section","#contact"],["Tailora","tailora.ng","https://tailora.ng"],["X / Twitter","@drexstargamin","https://x.com/drexstargamin"],["Telegram","@metaldness","https://t.me/metaldness"],["GitHub","DavidAdeboye","https://github.com/DavidAdeboye"]];
+const items=[["Email","davidadeboye47@gmail.com","mailto:davidadeboye47@gmail.com"],["LinkedIn","Adesanya David","https://www.linkedin.com/in/adesanya-david-78212a2a7/"],["Work","Section","#work"],["Experience","Section","#experience"],["Stack","Section","#stack"],["About","Section","#about"],["Contact","Section","#contact"],["Tailora","tailora.ng","https://tailora.ng"],["X / Twitter","@drexstargamin","https://x.com/drexstargamin"],["Telegram","@metaldness","https://t.me/metaldness"],["GitHub","DavidAdeboye","https://github.com/DavidAdeboye"]];
 const ov=$('#ov'),q=$('#q'),res=$('#res');let sel=0,cur=items;
 function render(){res.innerHTML=cur.map((x,i)=>'<li role="option" data-i="'+i+'" aria-selected="'+(i===sel)+'"><span>'+x[0]+'</span><small>'+x[1]+'</small></li>').join('')||'<li><small>No matches</small></li>'}
 function open(){ov.classList.add('on');q.value='';cur=items;sel=0;render();q.focus()}
