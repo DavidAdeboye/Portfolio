@@ -123,6 +123,19 @@ section{padding-top:clamp(3rem,7vw,5.5rem)}
 .duo .lk{stroke:var(--red);stroke-width:1.5;stroke-dasharray:4 4;animation:da 1.2s linear infinite}
 @keyframes da{to{stroke-dashoffset:-16}}
 
+.tb{display:flex;gap:1.1rem;font-size:.85rem;color:var(--dim);border-bottom:1px solid var(--line);margin-bottom:.2rem}
+.tb b{color:var(--fg);font-weight:500;padding-bottom:.45rem;border-bottom:2px solid var(--red);margin-bottom:-1px}
+.tb span{padding-bottom:.45rem}
+.od{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:.8rem;align-items:center;padding:.7rem 0;border-top:1px solid var(--line)}
+.tb+.od{border-top:0}
+.od .av{display:grid;place-items:center;font-size:.72rem;font-weight:600;color:var(--fg)}
+.ot b{display:block;font-weight:500;font-size:.95rem;line-height:1.25}
+.ot small,.rt small{color:var(--dim);font-size:.8rem}
+.rt{display:flex;flex-direction:column;align-items:flex-end;gap:.25rem;text-align:right}
+.ms{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;margin-top:.7rem;padding-top:.8rem;border-top:1px dashed var(--line)}
+.ms small{color:var(--dim);margin-right:.3rem;font-size:.8rem}
+.ms span{font-size:.8rem;border:1px solid var(--line);border-radius:5px;padding:0 .5rem;background:var(--bg)}
+
 /* about */
 .ab{display:grid;gap:1.5rem 4rem}
 @media(min-width:800px){.ab{grid-template-columns:1.4fr 1fr}}
@@ -200,10 +213,12 @@ section{padding-top:clamp(3rem,7vw,5.5rem)}
         <p>Startup project I work on with a small team: a SaaS platform for tailoring businesses to manage orders, clients and payments in one place.</p>
         <ul class="ch"><li>Next.js</li><li>Supabase</li><li>Vercel</li></ul><a class="lnk" href="https://tailora.ng">Visit tailora.ng</a></div>
       <div class="vz" aria-hidden="true"><div class="win"><i></i><i></i><i></i><span>tailora.ng / orders</span></div>
-        <div class="or"><div class="av"></div><div><div class="sk1"></div><div class="sk1 s"></div></div><span class="tagp ok">Paid</span></div>
-        <div class="or"><div class="av"></div><div><div class="sk1"></div><div class="sk1 s"></div></div><span class="tagp">Cutting</span></div>
-        <div class="or"><div class="av"></div><div><div class="sk1"></div><div class="sk1 s"></div></div><span class="tagp">Fitting</span></div>
-        <div class="or"><div class="av"></div><div><div class="sk1"></div><div class="sk1 s"></div></div><span class="tagp ok">Ready</span></div>
+        <div class="tb"><b>Orders</b><span>Clients</span><span>Payments</span></div>
+        <div class="od"><div class="av">AO</div><div class="ot"><b>Adaeze O.</b><small>Ankara gown &middot; due Fri</small></div><div class="rt"><span class="tagp">In progress</span><small>&#8358;25,000 balance</small></div></div>
+        <div class="od"><div class="av">TB</div><div class="ot"><b>Tunde B.</b><small>Senator suit &middot; due Mon</small></div><div class="rt"><span class="tagp ok">Ready</span><small>Paid in full</small></div></div>
+        <div class="od"><div class="av">CE</div><div class="ot"><b>Chioma E.</b><small>Aso ebi set &middot; due next week</small></div><div class="rt"><span class="tagp">Pending</span><small>&#8358;40,000 balance</small></div></div>
+        <div class="ms"><small>Saved measurements</small><span>Bust 36</span><span>Waist 29</span><span>Hip 40</span><span>+37 more</span></div>
+        <p class="note">Illustration, not real data.</p>
       </div>
     </article>
 
@@ -228,7 +243,7 @@ section{padding-top:clamp(3rem,7vw,5.5rem)}
     <h3 class="d" style="font-size:1.2rem;margin:2.6rem 0 .9rem">Also built</h3>
     <ul class="ml">
       <li><div class="r"><b>ClipScout</b><span>Scores Whop clipping campaigns by payout, budget runway and crowding</span></div></li>
-      <li><a href="https://clipclan.netlify.app"><b>ClipClan</b><span>Podcast clipper that runs entirely in the browser</span></a></li>
+      <li><a href="https://dc-clip-finder.vercel.app"><b>ClipClan</b><span>Multi-cut podcast clipper that runs in the browser</span></a></li>
       <li><div class="r"><b>Docket</b><span>Swipe-based interface for job applications</span></div></li>
       <li><div class="r"><b>Degen Log</b><span>Trading journal for memecoin trades</span></div></li>
       <li><div class="r"><b>YouTube RAG chatbot</b><span>Answers from a creator's transcripts, refreshed by a daily ingest</span></div></li>
